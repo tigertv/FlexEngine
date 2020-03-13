@@ -9,6 +9,11 @@
 #define _CRTDBG_MAP_ALLOC
 #endif
 
+#if ENABLE_VMEM
+#define VMEM_OVERRIDE_NEW_DELETE
+#include "VMemSingleFile/VMem.cpp"
+#endif
+
 bool g_bShowConsole = true;
 
 int main(int argc, char *argv[])
